@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Automation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-top: 0;
+        }
+        .control-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .control-group label {
+            flex: 1;
+        }
+        .control-group input, .control-group select {
+            flex: 2;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        .button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Home Automation System</h1>
+
+        <!-- Lights Control Section -->
+        <div class="section">
+            <h2>Lights Control</h2>
+            <div class="control-group">
+                <label for="living-room-light">Living Room:</label>
+                <select id="living-room-light">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="bedroom-light">Bedroom:</label>
+                <select id="bedroom-light">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                </select>
+            </div>
+            <button class="button" onclick="updateLights()">Update Lights</button>
+        </div>
+
+        <!-- Thermostat Control Section -->
+        <div class="section">
+            <h2>Thermostat Control</h2>
+            <div class="control-group">
+                <label for="thermostat">Set Temperature:</label>
+                <input type="number" id="thermostat" min="60" max="80" value="70">
+            </div>
+            <button class="button" onclick="updateThermostat()">Set Temperature</button>
+        </div>
+
+        <!-- Security System Control Section -->
+        <div class="section">
+            <h2>Security System</h2>
+            <div class="control-group">
+                <label for="security-system">System Status:</label>
+                <select id="security-system">
+                    <option value="armed">Armed</option>
+                    <option value="disarmed">Disarmed</option>
+                </select>
+            </div>
+            <button class="button" onclick="updateSecurity()">Update Security</button>
+        </div>
+    </div>
+
+    <script>
+        function updateLights() {
+            var livingRoomLight = document.getElementById('living-room-light').value;
+            var bedroomLight = document.getElementById('bedroom-light').value;
+            alert('Lights Updated:\nLiving Room: ' + livingRoomLight + '\nBedroom: ' + bedroomLight);
+        }
+
+        function updateThermostat() {
+            var temperature = document.getElementById('thermostat').value;
+            alert('Thermostat Set to ' + temperature + '°F');
+        }
+
+        function updateSecurity() {
+            var securityStatus = document.getElementById('security-system').value;
+            alert('Security System ' + securityStatus);
+        }
+    </script>
+</body>
+</html>
