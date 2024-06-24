@@ -1,9 +1,14 @@
 Name: Divya Dharshini.E
+
 Company: CODTECH IT SOLUTIONS
+
 ID: CT04IOT2455
+
 Domain: Internet Of Things
+
 Duration: June 15 to July 15
-Mentor: Muzannil Ahmed
+
+Mentor: Muzammil Ahmed
 
 Project Overview: Smart Home Automation System
 1. Project Introduction
